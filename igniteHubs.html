@@ -1,0 +1,252 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dodo's Pizza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<script>
+    function toggleDropdownMenu() {
+        document.getElementById("links-container-dropdown").classList.toggle("active")
+    }
+
+    function hideDropdownMenu() {
+        document.getElementById("links-container-dropdown").classList.remove("active")
+    }
+</script>
+
+<body>
+    <style>
+
+        body {
+            background-color: rgb(255, 237, 194);
+            margin: 0;
+        }
+
+        main {
+            text-align: center;
+            z-index: 1;
+            padding-top: 50px;
+        }
+
+        ul {
+            padding: 0%;
+            
+        }
+       li {
+           display: inline-block;
+        }
+
+  
+
+        #navbar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background-color: rgb(251, 55, 55);
+            border-bottom: solid 1px black;
+        }
+
+        #links-container-horizontal {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        #links-container-horizontal a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        #links-container-dropdown {
+            background-color: rgb(255, 189, 36);
+            display: none;
+            width: 300px;
+            border: solid 1px black;
+            text-align: center;
+            margin-top: -1px;
+            padding: 0%;
+            position: absolute;
+            right: 0%;
+            z-index: 2;
+        }
+
+        #links-container-dropdown a {
+            font-size: 20px;
+            color: black;
+            display: block;
+            padding: 15px 5px 15px 5px;
+        }
+
+        #links-container-dropdown a:focus {
+            background-color: rgb(251, 55, 55);
+        }
+
+        .logo {
+            display: inline-block;
+            width: 250px;
+            vertical-align: middle;
+        }
+
+        .menu {
+            height: 40px;
+            vertical-align: middle;
+            display: none;
+            position: absolute;
+            right: 3%;
+            top: 1%;
+        }
+
+        #pizza-image {
+            text-align: center;
+            width: 20%;
+        }
+
+        footer {
+            display: flex;
+            text-align: center;
+            background-color: rgb(251, 55,55);
+            margin-bottom: 0%;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-top: 50px;
+            border-top: solid 1px black;
+        }
+
+
+
+        .active {
+            display: inline-block !important;
+        }
+
+        @media screen and (max-width: 974px) {
+            #links-container-horizontal {
+                display: none;
+            }
+
+            .menu {
+                display: inline-block;
+             
+            }
+        }
+
+        @media screen and (min-width: 974px) {
+
+            .active {
+                display: none !important;
+             
+            }
+        }
+
+
+        @media screen and (max-width: 320px) {
+            #links-container-dropdown {
+                width: 200px;
+            }
+            #links-container-dropdown a {
+            font-size: 15px;
+            color: black;
+            display: block;
+            padding: 10px 3px 10px 3px;
+        }
+        }
+
+        
+
+
+    </style>
+
+<div id="navbar">
+    <li><img class="logo" src="Dodo_Pizza-Logo.png" onclick="hideDropdownMenu()">
+    <div id="links-container-horizontal">
+        <ul>
+            <li><a href="/index">DELIVERY</a></li>
+        
+            <li><a href="/index">TAKE AWAY</a></li>
+
+            <li><a href="/index">VOUCHERS</a></li>
+
+            <li><a href="/index">DISCOUNTS</a></li>
+
+            <li><a href="/index">TEAM</a></li>
+
+            <li><a href="/index">CONTACT US</a></li>
+
+        </ul>
+       <li><img class="menu" src="burger.png" onclick="toggleDropdownMenu()"></li>
+    </div>
+   
+</div>
+
+<div id="links-container-dropdown">
+    <ul>
+       <a href="/index">DELIVERY</a>
+       <a href="/index">TAKE AWAY</a>
+       <a href="/index">VOUCHERS</a>
+       <a href="/index">DISCOUNTS</a>
+       <a href="/index">TEAM</a>
+       <a href="/index">CONTACT US</a>
+    </ul>
+</div>
+<br/>
+
+<main onclick="hideDropdownMenu()">
+<div >
+    <img id="pizza-image" src="pizza.png">
+</div>
+
+
+    <h1>Choose your favourite:</h1>
+
+
+<h2>Margherita</h2>
+<p>£9.45</p>
+
+<h2>Pepperoni Bomba</h2>
+<p>£12.00</p>
+
+<h2>Ham and Mushrooms</h2>
+<p>£10.95</p>
+
+<h2>Roast Chicken and Chorizo</h2>
+<p>£14.00</p>
+
+<h2>Chicken and Bacon</h2>
+<p>£13.00</p>
+
+<h2>Goats Cheese</h2>
+<p>£12.00</p>
+
+<h2>Parma</h2>
+<p>£12.00</p>
+
+<h2>Mediterranean</h2>
+<p>£11.00</p>
+
+<h2>Marinara (Vegan)</h2>
+<p>£8.50</p>
+
+<h2>4 Formaggi</h2>
+<p>£12.00</p>
+
+<h2>Tuna and Red Onion</h2>
+<p>£13.00</p>
+  
+</main>
+<footer>
+    <h1>We are always happy to see you again!</h1>
+</footer>
+
+</body>
+
+
+
+</html>
+
+
+
+
