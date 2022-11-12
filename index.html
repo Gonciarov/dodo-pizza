@@ -8,16 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<script>
-    function toggleDropdownMenu() {
-        document.getElementById("links-container-dropdown").classList.toggle("active")
-    }
-
-    function hideDropdownMenu() {
-        document.getElementById("links-container-dropdown").classList.remove("active")
-    }
-</script>
-
 <body>
     <style>
 
@@ -61,30 +51,6 @@
             margin-right: 20px;
         }
 
-        #links-container-dropdown {
-            background-color: rgb(255, 189, 36);
-            display: none;
-            width: 300px;
-            border: solid 1px black;
-            text-align: center;
-            margin-top: -1px;
-            padding: 0%;
-            position: absolute;
-            right: 0%;
-            z-index: 2;
-        }
-
-        #links-container-dropdown a {
-            font-size: 20px;
-            color: black;
-            display: block;
-            padding: 15px 5px 15px 5px;
-        }
-
-        #links-container-dropdown a:focus {
-            background-color: rgb(251, 55, 55);
-        }
-
         .logo {
             display: inline-block;
             width: 250px;
@@ -118,11 +84,6 @@
         }
 
 
-
-        .active {
-            display: inline-block !important;
-        }
-
         @media screen and (max-width: 974px) {
             #links-container-horizontal {
                 display: none;
@@ -134,34 +95,13 @@
             }
         }
 
-        @media screen and (min-width: 974px) {
-
-            .active {
-                display: none !important;
-             
-            }
-        }
-
-
-        @media screen and (max-width: 320px) {
-            #links-container-dropdown {
-                width: 200px;
-            }
-            #links-container-dropdown a {
-            font-size: 15px;
-            color: black;
-            display: block;
-            padding: 10px 3px 10px 3px;
-        }
-        }
-
         
 
 
     </style>
 
 <div id="navbar">
-    <li><img class="logo" src="Dodo_Pizza-Logo.png" onclick="hideDropdownMenu()">
+    <li><img class="logo" src="Dodo_Pizza-Logo.png">
     <div id="links-container-horizontal">
         <ul>
             <li><a href="/index">DELIVERY</a></li>
@@ -177,7 +117,7 @@
             <li><a href="/index">CONTACT US</a></li>
 
         </ul>
-       <li><img class="menu" src="burger.png" onclick="toggleDropdownMenu()"></li>
+       <li><img class="menu" src="burger.png"></li>
     </div>
    
 </div>
@@ -194,7 +134,7 @@
 </div>
 <br/>
 
-<main onclick="hideDropdownMenu()">
+<main>
 <div >
     <img id="pizza-image" src="pizza.png">
 </div>
